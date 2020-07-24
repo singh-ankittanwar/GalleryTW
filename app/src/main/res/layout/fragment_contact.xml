@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactFragment"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/contactnumber"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_marginTop="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/contactemail"
+            android:layout_below="@+id/contactnumber"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_marginTop="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/userId"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/contactemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            />
+
+        <Button
+            android:id="@+id/btnlgt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="logout"
+            android:layout_below="@+id/userId"
+            android:layout_marginTop="15dp"
+            />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "507120916503",
+    "firebase_url": "https://gallerytw-d35fa.firebaseio.com",
+    "project_id": "gallerytw-d35fa",
+    "storage_bucket": "gallerytw-d35fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507120916503:android:e2756bb9b1716294b1e452",
+        "android_client_info": {
+          "package_name": "com.teamworks.gallerytw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507120916503-6o9rphol0estppee67c091s3dshbosff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0CA9S8NRibFxjEUnFl9sVLl4euRLMI-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507120916503-6o9rphol0estppee67c091s3dshbosff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
