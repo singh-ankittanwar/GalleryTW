@@ -2,24 +2,25 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="8dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="8dp">
+        android:layout_margin="12dp">
 
         <ImageView
             android:id="@+id/itmeIV"
             android:layout_centerHorizontal="true"
             android:layout_width="150dp"
-            android:layout_height="150dp"/>
+            android:layout_height="150dp"
+            />
 
         <TextView
             android:id="@+id/foobarid"
             android:text="ID     : "
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:layout_below="@+id/itmeIV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,9 +29,9 @@
         <TextView
             android:id="@+id/itemID"
             android:layout_below="@+id/itmeIV"
-            android:layout_toRightOf="@+id/foobarid"
+            android:layout_toEndOf="@+id/foobarid"
             android:textColor="#000"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
@@ -38,7 +39,7 @@
         <TextView
             android:id="@+id/foobartitle"
             android:layout_below="@+id/foobarid"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:text="TITLE : "
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,8 +48,8 @@
         <TextView
             android:id="@+id/itemTitle"
             android:layout_below="@+id/foobarid"
-            android:layout_toRightOf="@+id/foobartitle"
-            android:textSize="22sp"
+            android:layout_toEndOf="@+id/foobartitle"
+            android:textSize="18sp"
             android:textColor="#000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

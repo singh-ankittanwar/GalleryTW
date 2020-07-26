@@ -1,5 +1,6 @@
 package com.teamworks.gallerytw;
 
+import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -34,12 +35,13 @@ public class xAdapter extends RecyclerView.Adapter<xAdapter.xViewHolder> {
         return new xViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull xViewHolder holder, int position) {
 
         apiItem item = items.get(position);
         holder.xTitle.setText(item.getTitle());
-        holder.xID.setText(item.getId());
+        holder.xID.setText(Integer.toString(item.getId()));
         Picasso.get().load(item.getThumbnailUrl()).into(holder.xImage);
     }
 

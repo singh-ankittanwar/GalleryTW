@@ -23,6 +23,8 @@ import java.util.List;
 public class ViewImageFragment extends Fragment {
 
     private RecyclerView recyclerView;
+    private List<apiItem> y;
+    private xAdapter z;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,9 +33,13 @@ public class ViewImageFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_view_image, container, false);
 
         recyclerView = (RecyclerView) v.findViewById(R.id.mainRV);
+        recyclerView.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(llm);
+
+
+        y = new ArrayList<>();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://jsonplaceholder.typicode.com/")
@@ -50,9 +56,11 @@ public class ViewImageFragment extends Fragment {
                     Log.d("HERE --->", response.toString());
                     return;
                 }
-                List<apiItem> apiItemsx = response.body();
 
-                recyclerView.setAdapter(new xAdapter(getContext(), apiItemsx));
+                y = response.body();
+
+                z = new xAdapter(getContext(), y);
+                recyclerView.setAdapter(z);
             }
 
             @Override

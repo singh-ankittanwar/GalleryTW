@@ -38,21 +38,22 @@ public class ContactFragment extends Fragment {
 
         cNumber = (TextView) v.findViewById(R.id.contactnumber);
         cEmail = (TextView) v.findViewById(R.id.contactemail);
-
         tvUser = (TextView) v.findViewById(R.id.userId);
         logout = (Button) v.findViewById(R.id.btnlgt);
 
         mAuth = FirebaseAuth.getInstance();
 
+
+
         tvUser.setText(Objects.requireNonNull(mAuth.getCurrentUser()).getEmail());
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getContext(), SignIn.class));
-                getActivity().finish();
-            }
+        logout.setOnClickListener(v1 -> {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getContext(), SignIn.class));
+            Objects.requireNonNull(getActivity()).finish();
         });
+
+
+
 
         String t1 = "Phone Number : +91 9876543210";
         SpannableString st1 = new SpannableString(t1);
@@ -76,6 +77,9 @@ public class ContactFragment extends Fragment {
         st1.setSpan(clickableSpan1, 15, 29, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         cNumber.setText(st1);
         cNumber.setMovementMethod(LinkMovementMethod.getInstance());
+
+
+
 
         String t2 = "Email : abc@xyz.com";
         SpannableString st2 = new SpannableString(t2);
